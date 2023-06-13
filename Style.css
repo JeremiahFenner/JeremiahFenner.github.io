@@ -1,0 +1,37 @@
+@import url('https://fonts.cdnfonts.com/css/ocr-a-std');/*space font*/
+
+body {
+    background-color: rgb(174, 209, 214);
+  }
+
+  h1 {/*header 1*/
+    color: rgb(0, 0, 0);
+  }
+
+  p {/*paragraph*/
+    color: rgb(255, 223, 107);
+  }
+
+  h1{
+    font-family: Andale Mono, monospace
+  }
+
+  h4{/*Home Page*/
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  h5{/*User Page*/
+    position: auto;
+    top: auto;
+  }
+
+  h6{/*Study Page*/
+    position: auto;
+    top: 0;
+  }
+
+  spacegame{
+    font-family: 'OCR A Std', sans-serif;
+  }
