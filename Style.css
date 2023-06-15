@@ -1,37 +1,114 @@
 @import url('https://fonts.cdnfonts.com/css/ocr-a-std');/*space font*/
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");/*text font*/
 
 body {
-    background-color: rgb(174, 209, 214);
+    background-color: rgb(77, 76, 76);
+  }
+
+  header {
+    background-color: rgb(81, 158, 104);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 150px;
+    z-index:-999;
+  }
+
+  bottom{
+    background-color: rgb(81, 158, 104);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 1920px;
+    height: 70px;
+    z-index:-999;
+  }
+
+  h3{
+    position: fixed;
+    font-family:  'Lora', serif;
+    top: 200px;
+    text-align: center;
+    font-size:x-large;
+    color: rgb(255, 241, 221);
+    
   }
 
   h1 {/*header 1*/
     color: rgb(0, 0, 0);
+    font-family:  'Lora', serif;
+  }
+
+  h2{
+    font-family:  'Lora', serif;
   }
 
   p {/*paragraph*/
     color: rgb(255, 223, 107);
   }
 
-  h1{
-    font-family: Andale Mono, monospace
-  }
-
-  h4{/*Home Page*/
+  h4{
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  h5{/*User Page*/
+  h5{
     position: auto;
     top: auto;
   }
 
-  h6{/*Study Page*/
+  h6{
     position: auto;
     top: 0;
   }
 
   spacegame{
     font-family: 'OCR A Std', sans-serif;
+  }
+
+  .buttonHome{
+    top: 0;
+    right: 0;
+  }
+
+  .buttonStudy{
+    position: fixed;
+    font-family:  'Lora', serif;
+    top: 0;
+    right: 0;
+    background-color: rgb(189, 186, 186);
+    padding: 15px 20px;
+    border-radius: 25px;
+    margin: 10px;
+  }
+
+  .buttonUser{
+    position: fixed;
+    top: 60px;
+    right: 2px;
+    background-color: rgb(189, 186, 186);
+    padding: 15px 20px;
+    border-radius: 25px;
+    margin: 10px;
+    font-family:  'Lora', serif;
+  }
+
+  message{
+    position: fixed;
+    left: 10px;
+    bottom: 20px;
+    font-size: 20px;
+  }
+
+  tree{
+    top: 25px;
+    
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+
   }
