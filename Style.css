@@ -2,28 +2,24 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");/*text font*/
 
 body {
-   background-image: url("/images/osman-rana-IRSyulBDNc0-unsplash.jpg");
-   background-position: center;
-   width: 100vh;
-   height: 100vh;
+   margin: 0;
+   background-image: url("./images/osman-rana-IRSyulBDNc0-unsplash.jpg");
+   background-color: black;
+   background-position: center center;
+   margin: auto;
    background-size: cover;
-   z-index: 999;
+   display: flex;
+   width: 100vw;
+   height: 100vh;
   }
 
   header {
-    /*background-image: url(/images/ian-keefe-2X89pjPktyA-unsplash.jpg);*/
-    background-color: balck;
     display: flex;
-    flex-direction: column;
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 11px;
 
   }
 
   bottom{
-    background-color: rgb(81, 158, 104);
+    background-color: rgb(0, 0, 0);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -38,21 +34,22 @@ body {
     top: 200px;
     text-align: center;
     font-size:x-large;
-    color: rgb(255, 241, 221);
+    color: rgb(255, 220, 169);
     
   }
 
   h1 {/*header 1*/
-    color: rgb(0, 0, 0);
+    color: rgb(255, 220, 169);
     font-family:  'Lora', serif;
   }
 
   h2{
+    color: rgb(255, 220, 169);
     font-family:  'Lora', serif;
   }
 
   p {/*paragraph*/
-    color: rgb(255, 223, 107);
+    color: rgb(255, 220, 169);
   }
 
   h4{
@@ -81,14 +78,15 @@ body {
   }
 
   .buttonStudy{
-    position: fixed;
+    background-image: url("./images/middle_pinecone.png");
+    position: absolute;
     font-family:  'Lora', serif;
-    top: 0;
-    right: 0;
-    background-color: rgb(189, 186, 186);
-    padding: 15px 20px;
-    border-radius: 25px;
-    margin: 10px;
+    top: 300px;
+    right: 100px;
+    margin: 0;
+    background-size:cover;
+    width: 170px;
+    height: 170px;
   }
 
   .buttonUser{
@@ -107,17 +105,5 @@ body {
     left: 10px;
     bottom: 20px;
     font-size: 20px;
-  }
-
-  tree_trunk{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    height: 439px;
-    width: 200px;
-    background-color: rgb(134, 78, 25);
-    display: inline-block;
-    z-index: -999;
-
+    color: rgb(255, 220, 169);
   }
