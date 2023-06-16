@@ -3,11 +3,11 @@
 
 body {
    margin: 0;
-   background-image: url("./images/osman-rana-IRSyulBDNc0-unsplash.jpg");
-   background-color: black;
-   background-position: center center;
-   margin: auto;
+   background-image: url("./images/ian-keefe-2X89pjPktyA-unsplash.jpg");
+   background-color: whitesmoke;
+   background-position: center 80%;
    background-size: cover;
+   margin: auto;
    display: flex;
    width: 100vw;
    height: 100vh;
@@ -77,7 +77,7 @@ body {
     right: 0;
   }
 
-  .buttonStudy{
+  /* .buttonStudy{
     background-image: url("./images/middle_pinecone.png");
     position: absolute;
     font-family:  'Lora', serif;
@@ -87,18 +87,78 @@ body {
     background-size:cover;
     width: 170px;
     height: 170px;
+    border: 1px solid black;
+  } */
+
+  .buttonStudy{
+    position: relative;
+    top: 200px;
+    left: 400px;
+    font-family:  'Lora', serif;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background: rgb(248, 248, 248);
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgb(248, 248, 248), 5px 5px 15px rgb(248, 248, 248), inset 5px 5px 10px rgb(248, 248, 248), inset -5px -5px 10px rgb(248, 248, 248);
+    color: rgb(248, 248, 248);
+    font-size: 24px;
   }
 
   .buttonUser{
-    position: fixed;
-    top: 60px;
-    right: 2px;
-    background-color: rgb(189, 186, 186);
-    padding: 15px 20px;
-    border-radius: 25px;
-    margin: 10px;
+    position: relative;
+    top: 200px;
+    left: 400px;
     font-family:  'Lora', serif;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background: rgb(248, 248, 248);
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgb(248, 248, 248), 5px 5px 15px rgb(248, 248, 248), inset 5px 5px 10px rgb(248, 248, 248), inset -5px -5px 10px rgb(248, 248, 248);
+    color: rgb(248, 248, 248);
+    font-size: 24px;
   }
+
+  button:focus{
+    outline: none;
+  }
+
+  button:hover{
+    font-size: 23px;
+    transition: 500ms;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 10px rgb(172, 170, 170);
+    border: 3px solid black;
+
+    -webkit-mask: 
+    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
+    var(--_i,500%) 0  /500% var(--_i,50px) border-box no-repeat,
+    conic-gradient(from 180deg at top 10px right 8px, #000 90deg,#000 0)
+    var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #000 90deg,#000 0)
+    0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s;
+    
+    
+  }
+
+    /* -webkit-mask: 
+    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
+    var(--_i,500%) 0  /500% var(--_i,50px) border-box no-repeat,
+    conic-gradient(from 180deg at top 10px right 8px, #000 90deg,#000 0)
+    var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #000 90deg,#000 0)
+    0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s;
+    
+  } */
 
   message{
     position: fixed;
