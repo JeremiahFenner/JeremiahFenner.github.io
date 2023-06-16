@@ -2,17 +2,24 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");/*text font*/
 
 body {
-    background-color: rgb(77, 76, 76);
+   background-image: url("/images/osman-rana-IRSyulBDNc0-unsplash.jpg");
+   background-position: center;
+   width: 100vh;
+   height: 100vh;
+   background-size: cover;
+   z-index: 999;
   }
 
   header {
-    background-color: rgb(81, 158, 104);
-    position: fixed;
+    /*background-image: url(/images/ian-keefe-2X89pjPktyA-unsplash.jpg);*/
+    background-color: balck;
+    display: flex;
+    flex-direction: column;
     left: 0;
     top: 0;
-    width: 1920px;
-    height: 150px;
-    z-index:-999;
+    width: 10px;
+    height: 11px;
+
   }
 
   bottom{
@@ -102,13 +109,15 @@ body {
     font-size: 20px;
   }
 
-  tree{
-    top: 25px;
-    
-    height: 25px;
-    width: 25px;
-    background-color: black;
-    border-radius: 50%;
+  tree_trunk{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    height: 439px;
+    width: 200px;
+    background-color: rgb(134, 78, 25);
     display: inline-block;
+    z-index: -999;
 
   }
