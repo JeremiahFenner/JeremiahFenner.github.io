@@ -151,7 +151,6 @@ body {
     transition: 500ms;
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 10px rgb(172, 170, 170);
-    border: 2px solid black;
 
     /* -webkit-mask: 
     conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
