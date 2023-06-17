@@ -151,7 +151,30 @@ body {
     transition: 500ms;
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 10px rgb(172, 170, 170);
-    border: 1px solid black;
+    border: 2px solid black;
+
+    /* -webkit-mask: 
+    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
+    var(--_i,200%) 0 /200% var(--_i,50px) border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s; */
+    
+    
+  }
+
+    /* -webkit-mask: 
+    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
+    var(--_i,500%) 0  /500% var(--_i,50px) border-box no-repeat,
+    conic-gradient(from 180deg at top 10px right 8px, #000 90deg,#000 0)
+    var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #000 90deg,#000 0)
+    0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s;
+    
+  } */
+
+  .draw{
 
     transition: color 0.25s;
 
@@ -171,10 +194,11 @@ body {
       bottom: 0;
       right: 0;
     }
-    
+
     &:hover{
       color: black;
     }
+    
 
     &:hover::before,
     &:hover::after{
@@ -197,6 +221,14 @@ body {
       height 0.25s ease-out 0.75s;
     }
 
+  }
+
+  .meet{
+
+    &:hover{
+      color: black;
+    }
+
     &::after{
       top:0;
       left:0;
@@ -205,6 +237,7 @@ body {
     &:hover::before{
       border-top-color: black;
       border-right-color: black;
+      transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
     }
 
     &:hover::after{
@@ -213,26 +246,7 @@ body {
       transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
     }
 
-    /* -webkit-mask: 
-    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
-    var(--_i,200%) 0 /200% var(--_i,50px) border-box no-repeat,
-    linear-gradient(#000 0 0) padding-box no-repeat;
-    transition: .3s, -webkit-mask-position .3s .3s; */
-    
-    
   }
-
-    /* -webkit-mask: 
-    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
-    var(--_i,500%) 0  /500% var(--_i,50px) border-box no-repeat,
-    conic-gradient(from 180deg at top 10px right 8px, #000 90deg,#000 0)
-    var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
-    conic-gradient(at bottom 8px left  8px,  #000 90deg,#000 0)
-    0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
-    linear-gradient(#000 0 0) padding-box no-repeat;
-    transition: .3s, -webkit-mask-position .3s .3s;
-    
-  } */
 
   message{
     position: fixed;
