@@ -107,4 +107,127 @@ html {
       transform: scale(1.5);
     }
   }
+
+  .buttonHome{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family:  'Lora', serif;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background: rgb(248, 248, 248);
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgb(248, 248, 248), 5px 5px 15px rgb(248, 248, 248), inset 5px 5px 10px rgb(248, 248, 248), inset -5px -5px 10px rgb(248, 248, 248);
+    color: rgb(248, 248, 248);
+    font-size: 24px;
+
+    &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  }
+
+  .draw{
+
+    transition: color 0.25s;
+
+    &::before,
+    &::after{
+      border: 2px solid transparent;
+      width: 0;
+      height: 0;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after{
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover{
+      color: black;
+    }
+    
+
+    &:hover::before,
+    &:hover::after{
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover::before{
+      border-top-color: black;
+      border-right-color: black;
+      transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    }
+
+    &:hover::after{
+      border-bottom-color: black;
+      border-left-color: black;
+      transition:
+      border-color 0s ease-out 0.5s,
+      width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
+    }
+
+  }
+
+  .meet{
+
+    &:hover{
+      color: black;
+    }
+
+    &::after{
+      top:0;
+      left:0;
+    }
+
+    &:hover::before{
+      border-top-color: black;
+      border-right-color: black;
+      transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    }
+
+    &:hover::after{
+      border-bottom-color: black;
+      border-left-color: black;
+      transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+    }
+
+  }
+
+
+  button:focus{
+    outline: none;
+  }
+
+  button:hover{
+    font-size: 23px;
+    transition: 500ms;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 10px rgb(172, 170, 170);
+
+    /* -webkit-mask: 
+    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
+    var(--_i,200%) 0 /200% var(--_i,50px) border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s; */
+    
+    
+  }
+
+
+
   
