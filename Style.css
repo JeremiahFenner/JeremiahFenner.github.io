@@ -1,6 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/ocr-a-std');/*space font*/
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");/*text font*/
 
+
+
+/***********************general*********************/
+
+
+
 body {
    margin: 0;
    background-image: url("./images/ian-keefe-2X89pjPktyA-unsplash.jpg");
@@ -94,6 +100,20 @@ body {
   }
 
 
+
+  /***********************general*********************/
+
+
+
+
+
+
+
+
+
+  /***********************button animations*********************/
+
+
   .buttonHome{
     position: relative;
     top: 0px;
@@ -181,27 +201,9 @@ body {
     transition: 500ms;
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 10px rgb(172, 170, 170);
-
-    /* -webkit-mask: 
-    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
-    var(--_i,200%) 0 /200% var(--_i,50px) border-box no-repeat,
-    linear-gradient(#000 0 0) padding-box no-repeat;
-    transition: .3s, -webkit-mask-position .3s .3s; */
     
     
   }
-
-    /* -webkit-mask: 
-    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
-    var(--_i,500%) 0  /500% var(--_i,50px) border-box no-repeat,
-    conic-gradient(from 180deg at top 10px right 8px, #000 90deg,#000 0)
-    var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
-    conic-gradient(at bottom 8px left  8px,  #000 90deg,#000 0)
-    0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
-    linear-gradient(#000 0 0) padding-box no-repeat;
-    transition: .3s, -webkit-mask-position .3s .3s;
-    
-  } */
 
   .draw{
 
@@ -277,6 +279,21 @@ body {
 
   }
 
+
+
+  /***********************button animations*********************/
+
+
+
+
+
+
+
+
+
+
+
+
   message{
     position: fixed;
     left: 10px;
@@ -284,6 +301,12 @@ body {
     font-size: 20px;
     color: rgb(255, 220, 169);
   }
+
+
+
+
+
+  /***********************login form animations*********************/
 
 
   .LoginForm{
@@ -319,3 +342,9 @@ body {
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 10px rgb(172, 170, 170);
   }
+
+
+
+
+
+  /***********************login form animations*********************/

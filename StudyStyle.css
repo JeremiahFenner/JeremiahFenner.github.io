@@ -1,5 +1,11 @@
 
 
+/***********************general*********************/
+
+
+
+
+
 html {
     height: 100%;
   }
@@ -10,6 +16,24 @@ html {
     overflow: hidden;
     background: linear-gradient(to bottom, #202020, #111119);
   }
+
+
+
+
+
+
+  /***********************general*********************/
+
+
+
+
+
+
+
+
+
+  /***********************background rain animation*********************/
+
   
   .rain {
     position: absolute;
@@ -107,6 +131,29 @@ html {
       transform: scale(1.5);
     }
   }
+
+
+
+
+
+
+
+
+  /***********************background rain animation*********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /***********************home button animations*********************/
 
   .buttonHome{
     position: relative;
@@ -218,16 +265,270 @@ html {
     transition: 500ms;
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 10px rgb(172, 170, 170);
-
-    /* -webkit-mask: 
-    conic-gradient(from 360deg at top 20px right 16px, #000 180deg,#000 0)
-    var(--_i,200%) 0 /200% var(--_i,50px) border-box no-repeat,
-    linear-gradient(#000 0 0) padding-box no-repeat;
-    transition: .3s, -webkit-mask-position .3s .3s; */
     
     
   }
 
 
 
+  /***********************home button animations*********************/
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***********************flashcards********************* */
+
+
+
+  #front, #back {
+    min-width:100%;
+    max-width:900px;
+    text-align: center;
+  }
+  #activeCardButtons {
+    min-width: 100%;
+    max-width: 900px;
+    margin-left:auto;
+    margin-right:auto;
+    
+  }
+  #prev {
   
+    margin-left: 0px;
+    padding: 2px;
+  }
+  #flip {
+    position:absolute;
+    width: 50px;
+    left:50%;
+    margin-left:-25px;
+  
+  
+  }
+  #next {
+  float:right;
+    margin-right:15px;
+  }
+  #submit {
+    position:relative;
+    width:180px;
+    margin-left:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    display:block;
+  }
+  #cardForm {
+    position:absolute;
+    width: 100%;
+    margin-left:50%;
+    margin-top:10px;
+  }
+  #front, #back{
+    display:block;
+  }
+  
+  /* #front:hover:before{
+    position:relative;
+    float:left;
+    font-size:24px;
+    content:'Question/Term:';
+    z-index:-1;
+    margin-right:-100%;
+    margin-top: -6px;
+    color:grey;
+  }
+  #back:hover:before{ 
+    position:relative;
+    float:left;
+    font-size:24px;
+    content:'Answer/Definition:';
+    z-index:-1;
+    margin-right:-100%;
+    margin-top:-8px;
+    color:grey;
+  } */
+  
+  #clearDeck{
+    position:relative;
+    width:360px;
+    margin-left:-90px;
+    display: block;
+  }
+  #clearDeck:hover{
+    color:red;
+    border: 3px solid red;
+    
+  }
+  #formContainer{
+    display:block;
+    position:relative;
+    margin-left:-90px;
+    width:100%;
+  }
+  #newTerm{
+    position:relative;
+    width:180px;
+    margin-top:10px;
+    display:block;
+  }
+  #newDef{
+    position:relative;
+    width:180px;
+    margin-top:10px;
+    
+  }
+  hr {
+    margin-left:-8px;
+  }
+  a.activator {
+  cursor:pointer;
+    position: absolute;
+    bottom:10px;
+  }
+  #importExport {
+      font-size:10pt;
+      position:relative;
+      bottom:200px;
+      left:-600px;
+      width: 500px;
+    height:180px;
+      background-color:#fff;
+      color:#7F7F7F;
+      padding:0px;
+    
+      border:0px solid #ccc;
+  
+      -moz-box-shadow: 0 1px 5px #333;
+      -webkit-box-shadow: 0 1px 5px #333;
+    border-radius: 20px;
+        -moz-border-radius: 20px;
+      -webkit-border-radius:20px;
+      -khtml-border-radius:20px;
+      z-index:101;
+    
+  }
+  #import {
+    float:left;
+    width: 50%;
+  /* 		height: 100%; */
+  /* 	position:fixed; */
+    height:100%;
+    left:0px;
+    background-color: lightgreen;
+      border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+  
+  }
+  #export {
+  /* 	clear:right; */
+    float:right;
+    width:50%;
+  /* 	position:fixed; */
+    height:100%;
+    right: 0px;
+  
+    background-color: seagreen;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+      
+  }
+  @keyframes slideright {
+    0%{
+      
+    }
+    100%{
+      
+    }
+  
+  }
+  @keyframes slideleft {
+    0%{
+      
+    }
+    100%{
+      
+    }
+  }
+  a.close {
+          position:relative;
+  /* 	display: inline; */
+              float:right;
+              width:26px;
+              height:26px;
+              background:transparent url(https://microwavemansion.com/images/cancel.png) repeat top left;
+              margin-top:-26px;
+              margin-right:-26px;
+              cursor:pointer;
+  }
+  .overlay{
+      background:transparent url(https://microwavemansion.com/images/overlay.png) repeat top left;
+      position:fixed;
+      top:0px;
+      bottom:0px;
+      left:0px;
+      right:0px;
+      z-index:100;
+  }
+  #deckSubmit {
+    border-bottom-left-radius: 20px;
+    width:50%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height:50px
+  /* 	height:100%; */
+  }
+  #deckSubmit:hover {
+    border:2px solid green;
+  }
+  #saveDeck {
+    border-bottom-right-radius: 20px;
+    width:50%;
+    position:absolute;
+    bottom: 0px;
+        height:50px;
+  
+  
+    
+  }
+  #saveDeck:hover {
+    border: 2px solid limegreen;
+  }
+  #uploadDeck {
+    padding-left:5px;
+  }
+  .lightText {
+    color: gray;
+    position: fixed;
+    bottom: 12px;
+    right: 5px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+  }
+  .upDown:hover {
+    
+  }
+  .showHideHotkeysButton {
+    display:visible;
+    position: fixed;
+    bottom: 12px;
+    right: 5px;
+  }
+  .hide {
+    display:none;
+  }
+
+
+
+  
+
+  /* ***********************flashcards********************* */
