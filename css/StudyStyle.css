@@ -292,6 +292,7 @@ html {
     min-width:100%;
     max-width:900px;
     text-align: center;
+    color: white;
   }
   #activeCardButtons {
     min-width: 100%;
