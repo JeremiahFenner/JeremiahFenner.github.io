@@ -77,23 +77,7 @@ var makeItRain = function() {
   front.innerHTML = card1.term;
   back.innerHTML = card1.definition;
   back.style.visibility = "hidden";
-  function showHideLightText() {
-    let d =document.getElementsByClassName('lightText')[0];
-    let el = document.getElementsByClassName('showHideHotkeysButton')[0];
-    if (d.classList.contains('hide')) {
-       d.classList.remove('hide')
-       } else {
-           d.classList.add('hide')
   
-    }
-    if (el.classList.contains('hide')) {
-      el.classList.remove('hide')
-  
-    } else {
-  
-      el.classList.add('hide')
-    }
-  }
   function flash() {
     if (front.style.visibility != "hidden") {
       front.style.visibility = "hidden";
@@ -110,6 +94,16 @@ var makeItRain = function() {
       document.getElementById("newDef").value = "";
       document.getElementById("cardForm").reset();
     }
+
+  function listCard(){
+    document.getElementById("newTerm").value = "";
+    document.getElementById("newDef").value = "";
+    if (cardIndex > 0)
+      cardIndex = (cardIndex);
+    else if (cardIndex == 0) cardIndex = myCards.length;
+    terms.innerHTML = myCards[cardIndex].term;
+    definitions.innerHTML = myCards[cardIndex].definition;
+  }
   
     function updatePlaceholder() {
       document.getElementById("newTerm").placeholder =
@@ -136,7 +130,7 @@ var makeItRain = function() {
       back.innerHTML = myCards[cardIndex].definition;
       // back.style.visibility = "hidden";
     } else if (formFront.value == formBack.value) {
-      alert('kinda defeats the purpose of a "flash" card doesn`t it?');
+      // same vales for both sides
     } else if (
       (formFront.value == null || formFront.value == "", formBack.value == null ||
         formBack.value == "", formFront.value == null ||
@@ -144,7 +138,7 @@ var makeItRain = function() {
         formFront.value == "" ||
         formBack.value == "")
     ) {
-      alert("Fill out both sides of the card, ya dringus!");
+      // here if both sides of the card are not filled out
     }
     document.getElementById("newTerm").focus();
   }

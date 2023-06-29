@@ -52,12 +52,30 @@
       <input id="newTerm" type="text" placeholder="Term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
       <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13) cardAdd()">
       <br>
-      <input id="submit" type="button" value="add it to the deck!" onClick="cardAdd()">
+      <input id="submit" type="button" value="add it to the deck!" onClick="cardAdd(); listCard();">
       <br>
       <input id="clearDeck" type="button" value="Click HERE to clear the deck!" onClick="emptyDeck()">
     </form>
     <br>
   </div>
+
+
+
+
+  <p id="terms">
+    <!-- card list terms live here -->
+    should be here terms
+  </p>
+  <p id="definitions">
+    <!-- card list definitions lives here -->
+    should be here def
+  </p>
+
+
+
+
+
+
       <script type="text/javascript">
 
     </script>
