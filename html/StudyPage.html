@@ -31,27 +31,26 @@
 
   <p id="front">
     <!-- term lives here   -->
-  </p><br>
-  <hr><br>
+  </p>
   <div id="back">
     <!-- definition lives here   -->
   </div><br>
   <div id ="activeCardButtons">
-    <button id="prev" onclick="prevCard()">Previous Card
-  </button>
-  <button id="flip" type="button" value="Flip" onclick="flash()">
-  Flip</button>
-  <button id="next" onclick="nextCard()">Next Card
-  </button>
+    <button id="prev" onclick="prevCard()">&cularr;</button>
+    <button id="flip" type="button" value="Flip" onclick="flash()">Flip</button>
+    <button id="next" onclick="nextCard()">&curarr;</button>
   </div>
   <br>
   <br>
   <br>
 
+  <button id="editcard" >&#9998</button>
+  <button id="removecard" >&#9851</button>
+
   <div id="formContainer">
     <form id="cardForm">
-      <input id="newTerm" type="text" placeholder="Add your own term or concept..." onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
-      <input id="newDef" type="text" placeholder="...give it a definition, then click the button to..." onKeyDown="if(event.keyCode==13) cardAdd()">
+      <input id="newTerm" type="text" placeholder="Term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
+      <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13) cardAdd()">
       <br>
       <input id="submit" type="button" value="add it to the deck!" onClick="cardAdd()">
       <br>
@@ -59,10 +58,6 @@
     </form>
     <br>
   </div>
-	<div class="showHideHotkeysButton">
-		<button onClick="showHideLightText()">hotkeys</button>
-	</div>
-	<p onClick="showHideLightText()" class="lightText hide" >hotkeys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br><span class="leftRight" title="left/right arrow keys" style="font-size:31px;position:relative;top:6px;">⇄</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prev/next</br><span title="up/down arrow keys" style="font-size:32px;position:relative;top:8px;">⇵</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flip card</br>&nbsp;&nbsp;<span class="return" title="return key" style="font-size:36px;position:relative;top:6px;">↵</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add card</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span title="delete" class="del" style="height:10px;font-size:32px;position:relative;top:8px;">␡</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear deck</p>
       <script type="text/javascript">
 
     </script>

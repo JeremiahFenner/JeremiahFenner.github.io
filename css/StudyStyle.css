@@ -213,7 +213,6 @@ html {
 /* ***********************flashcards********************* */
 
 
-
   #front, #back {
     min-width:100%;
     max-width:900px;
@@ -228,10 +227,48 @@ html {
     
   }
   #prev {
-  
-    margin-left: 0px;
-    padding: 2px;
+    position: relative;
+    margin: 1px;
+    padding: 1px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: xxx-large;
+    left: 50px;
+    top: 300px;
   }
+
+  #next{
+    position: relative;
+    margin: 1px;
+    padding: 1px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: xxx-large;
+    right: 50px;
+    top: 300px;
+  }
+
+  #editcard{
+    position: relative;
+    margin: 1px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: xxx-large;
+  }
+
+  #removecard{
+    position: relative;
+    margin: 1px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: xxx-large;
+    right: 0px;
+  }
+
   #flip {
     position:absolute;
     width: 50px;
@@ -239,10 +276,6 @@ html {
     margin-left:-25px;
   
   
-  }
-  #next {
-  float:right;
-    margin-right:15px;
   }
   #submit {
     position:relative;
@@ -349,12 +382,7 @@ html {
   .upDown:hover {
     
   }
-  .showHideHotkeysButton {
-    display:visible;
-    position: fixed;
-    bottom: 12px;
-    right: 5px;
-  }
+  
   .hide {
     display:none;
   }
