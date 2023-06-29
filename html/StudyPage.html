@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/javascript/StudyPage.js"></script>
 
 
 <head>
@@ -12,7 +11,7 @@
 
 
 <body class="back-row-toggle splat-toggle">
-  <button class="buttonHome draw meet" left="-500" top="0" onclick="document.location='../index.html'">Home</button>
+  <button class="buttonHome" left="-500" top="0" onclick="document.location='../index.html'">Home</button>
   <!-- <div class="rain front-row"></div>
   <div class="rain back-row"></div> -->
 
@@ -64,29 +63,6 @@
 		<button onClick="showHideLightText()">hotkeys</button>
 	</div>
 	<p onClick="showHideLightText()" class="lightText hide" >hotkeys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br><span class="leftRight" title="left/right arrow keys" style="font-size:31px;position:relative;top:6px;">⇄</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prev/next</br><span title="up/down arrow keys" style="font-size:32px;position:relative;top:8px;">⇵</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flip card</br>&nbsp;&nbsp;<span class="return" title="return key" style="font-size:36px;position:relative;top:6px;">↵</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add card</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span title="delete" class="del" style="height:10px;font-size:32px;position:relative;top:8px;">␡</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear deck</p>
-<select id="selectCards" style="display:none;">
-
-</select>
-  <div id="importExport">
-    
-	  <div id="import"> 
-		  <h2 style="text-align:center;">Import</h2>
-		  <p>choose a local file containing a <code>.json</code> array of cards, and then click below!</p>
-		  <input id="uploadDeck" type="file"></input>
-	  <button id="deckSubmit" onclick="upload_deck()">Choose a File and Click Here</button>
-	  
-	</div>
-	
-	<div id="export"> 
-		 <a class="close" id="close" onclick="slideOut()"></a>
-		<h2 style="text-align:center;color:white;">Export</h2>
-		<p style="color:white;">Click below to save a local <code>.json</code> file containing the current deck.</p>
-		
-		<button id="saveDeck" onclick="download_deck()">Save this Deck?</button>
-</div>
- 
-  </div>
-<a class="activator" id="activator" onclick="slideIn()">Click Here to Import & Export/Save Decks of Cards</a>
       <script type="text/javascript">
 
     </script>
@@ -104,5 +80,8 @@
 
 
 </body>
+
+<!-- cannot add script to the top of the page -->
+<script src="../javascript/StudyPage.js"></script>
 
 </html>

@@ -57,30 +57,21 @@ var makeItRain = function() {
   var clearDeck = document.getElementById("clearDeck");
   var formFront, formBack;
   
-  function slideIn(){
-    $('#importExport').animate({'left':'10px'},500);
+  // function slideIn(){
+  //   $('#importExport').animate({'left':'10px'},500);
           
-      };
-  function slideOut(){
-          $('#importExport').animate({'left':'-610px'},500);
-      };
+  //     };
+  // function slideOut(){
+  //         $('#importExport').animate({'left':'-610px'},500);
+  //     };
   var card1 = new Card(
-    "Lexical Environment",
-    "Where code sits in relation to any surrounding code",
+    "Test value",
+    "Test definition",
     "General"
-  );
-  var card2 = new Card(
-    "Execution Context",
-    "How, Why, When, and Where code is executed",
-    "General"
-  );
-  var card3 = new Card(
-    "JSON",
-    "JavaScript Object Notation, for storing objects and their enclosed data. Often referred to as Key Value Pairs",
-    "Objects"
   );
   
-  var myCards = [card1, card2, card3];
+  
+  var myCards = [card1];
   var cardIndex = 0;
   
   front.innerHTML = card1.term;
