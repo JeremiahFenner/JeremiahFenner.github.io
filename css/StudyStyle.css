@@ -216,7 +216,9 @@ html {
 
 /* ***********************flashcards********************* */
 
-
+  #cardTable{
+    color: white;
+  }
 
   #terms{
     position: absolute;

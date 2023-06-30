@@ -87,6 +87,21 @@ var makeItRain = function() {
       back.style.visibility = "hidden";
     }
   }
+
+  function listCard(){
+
+    var table = document.getElementById("cardTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = myCards[cardIndex].term;
+    cell2.innerHTML = myCards[cardIndex].definition;
+    let btndel = document.createElement("INPUT");
+    btndel.setAttribute("type", "submit")
+    btndel.innerText = "&#9851"; 
+    cell3.innerHTML.append(btndel);
+  }
   
   function cardAdd(formFront, formBack) {
     function clearForm() {
@@ -94,16 +109,6 @@ var makeItRain = function() {
       document.getElementById("newDef").value = "";
       document.getElementById("cardForm").reset();
     }
-
-  function listCard(){
-    document.getElementById("newTerm").value = "";
-    document.getElementById("newDef").value = "";
-    if (cardIndex > 0)
-      cardIndex = (cardIndex);
-    else if (cardIndex == 0) cardIndex = myCards.length;
-    terms.innerHTML = myCards[cardIndex].term;
-    definitions.innerHTML = myCards[cardIndex].definition;
-  }
   
     function updatePlaceholder() {
       document.getElementById("newTerm").placeholder =
