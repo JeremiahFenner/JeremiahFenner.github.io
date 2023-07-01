@@ -66,6 +66,7 @@ body {
   }
 
   h2{
+    letter-spacing: 4px;
     color: rgb(255, 220, 169);
     font-family:  'Lora', serif;
   }
@@ -119,6 +120,7 @@ body {
     top: 0px;
     left: 0px;
     font-family:  'Lora', serif;
+    letter-spacing: 3px;
     width: 150px;
     height: 50px;
     cursor: pointer;
@@ -145,6 +147,7 @@ body {
     top: 200px;
     left: 200px;
     font-family:  'Lora', serif;
+    letter-spacing: 1px;
     width: 150px;
     height: 50px;
     cursor: pointer;
@@ -171,6 +174,7 @@ body {
     top: 200px;
     left: 200px;
     font-family:  'Lora', serif;
+    letter-spacing: 1px;
     width: 150px;
     height: 50px;
     cursor: pointer;

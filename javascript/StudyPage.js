@@ -95,12 +95,24 @@ var makeItRain = function() {
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
     cell1.innerHTML = myCards[cardIndex].term;
     cell2.innerHTML = myCards[cardIndex].definition;
-    let btndel = document.createElement("INPUT");
-    btndel.setAttribute("type", "submit")
-    btndel.innerText = "&#9851"; 
-    cell3.innerHTML.append(btndel);
+    cell3.innerHTML = '<input type="button" value="&#9851" id="editcard" onclick="deleteRow(this)"/>';
+    cell4.innerHTML = '<input type="button" value="&#9998" id="removecard" onclick="editRow(this)"/>';
+
+  }
+
+  function deleteRow(currRow){
+
+    var i = currRow.parentNode.rowIndex;
+    document.getElementById('cardTable').deleteRow(i);
+
+  }
+
+
+  function editRow(){
+
   }
   
   function cardAdd(formFront, formBack) {
@@ -161,16 +173,16 @@ var makeItRain = function() {
     back.innerHTML = myCards[cardIndex].definition;
   
   }
-  function emptyDeck() {
-    var confirmation = confirm("Are you sure you want to delete this entire deck?");
-    if (confirmation) {
-    myCards.splice(0, myCards.length);
-    cardIndex = 0;
-    front.innerHTML = "&nbsp;";
-    back.innerHTML = "&nbsp;";
-    }
-    document.getElementById("newTerm").focus();
-  }
+  // function emptyDeck() {
+  //   var confirmation = confirm("Are you sure you want to delete this entire deck?");
+  //   if (confirmation) {
+  //   myCards.splice(0, myCards.length);
+  //   cardIndex = 0;
+  //   front.innerHTML = "&nbsp;";
+  //   back.innerHTML = "&nbsp;";
+  //   }
+  //   document.getElementById("newTerm").focus();
+  // }
   
       document.addEventListener("keyup", function(event) {
       event.preventDefault();

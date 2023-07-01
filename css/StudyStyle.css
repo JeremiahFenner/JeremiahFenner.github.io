@@ -287,11 +287,10 @@ html {
   #editcard{
     position: absolute;
     margin: 1px;
+    padding: 5px;
     background: none;
     border: none;
     color: white;
-    right: 60px;
-    top: 100px;
     font-size: xx-large;
     z-index: 999;
     /* z index required for hover to work on chrome */
@@ -305,12 +304,11 @@ html {
   #removecard{
     position: absolute;
     margin: 1px;
+    padding: 5px;
     background: none;
     border: none;
     color: white;
     font-size: xx-large;
-    right: 60px;
-    top: 210px;
     z-index: 100;
     /* z index required for hover to work on chrome */
   }
@@ -328,12 +326,16 @@ html {
   
   
   }
+
+
   #submit {
     position:relative;
     width:180px;
     margin-left:10px;
     margin-top:10px;
     margin-bottom:10px;
+    width: 25px;
+    height: 25px;
     display:block;
   }
   #cardForm {
