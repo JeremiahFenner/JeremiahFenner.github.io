@@ -196,6 +196,35 @@ body {
   }
   }
 
+
+  .testimony{
+    position: relative;
+    top: 200px;
+    left: 200px;
+    font-family:  'Lora', serif;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background: rgb(248, 248, 248);
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgb(248, 248, 248), 5px 5px 15px rgb(248, 248, 248), inset 5px 5px 10px rgb(248, 248, 248), inset -5px -5px 10px rgb(248, 248, 248);
+    color: rgb(248, 248, 248);
+    font-size: 24px;
+
+    &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  }
+
   button:focus{
     outline: none;
   }
@@ -305,6 +334,28 @@ body {
     font-size: 20px;
     color: rgb(255, 220, 169);
   }
+
+  #aboutPage{
+    position: relative;
+    top: 50px;
+    left: 310px;
+    font-family:  'Lora', serif;
+    width: 400px;
+    height: 450px;
+    cursor: pointer;
+    background: rgb(248, 248, 248);
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgb(248, 248, 248), 5px 5px 15px rgb(248, 248, 248), inset 5px 5px 10px rgb(248, 248, 248), inset -5px -5px 10px rgb(248, 248, 248);
+    color: rgb(0, 0, 0);
+    
+    font-size: 16px;
+    opacity: 0;
+
+  }
+
+  
 
 
 
