@@ -14,7 +14,8 @@ body {
    background-position: center 80%;
    background-size: cover;
    margin: auto;
-   display: flex;
+   /* display:auto; display:flex */
+   display:flexbox;
    width: 100vw;
    height: 100vh;
   }
@@ -27,23 +28,12 @@ body {
   bottom{
     background-color: rgb(0, 0, 0);
     position: fixed;
-    left: -200px;
+    left: 0;
     bottom: 0;
-    width: 1920px;
-    height: 90px;
+    width: 100%;
+    height: 700px;
     z-index:-999;
-    clip-path: polygon(0 0, 68% 41%, 68% 100%, 0% 100%);
-  }
-
-  bottomtri{
-    background-color: rgb(0, 0, 0);
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 1100px;
-    height: 90px;
-    z-index:-999;
-    clip-path: polygon(100% 86%, 68% 47%, 68% 100%, 100% 100%);
+    clip-path: polygon(0 89%, 0 100%, 100% 100%);
   }
 
   h3{
@@ -335,25 +325,54 @@ body {
     color: rgb(255, 220, 169);
   }
 
-  #aboutPage{
-    position: relative;
-    top: 50px;
-    left: 310px;
+  /* #aboutPage{
+    position:absolute;
+    right: 600px;
     font-family:  'Lora', serif;
-    width: 400px;
-    height: 450px;
+    width: auto;
     cursor: pointer;
-    background: rgb(248, 248, 248);
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: -5px -5px 15px rgb(248, 248, 248), 5px 5px 15px rgb(248, 248, 248), inset 5px 5px 10px rgb(248, 248, 248), inset -5px -5px 10px rgb(248, 248, 248);
-    color: rgb(0, 0, 0);
-    
+    background: rgb(0, 0, 0);
+    color: white;
+    margin-right: -400px;
     font-size: 16px;
-    opacity: 0;
 
+  } */
+
+  #aboutPageWrapper{
+    position: relative;
+    width: 500px;
+    left: 1500px;
+    top: 0px;
+    height: auto;
+    background: black;
+    color: #fff;
+    cursor: pointer;
   }
+
+  /* #aboutPageWrapper{
+    overflow-x: hidden;
+  } */
+
+
+
+      .aboutPage {
+        visibility: hidden;
+        height:0px;
+          -webkit-transition:height, 0.5s linear;
+        -moz-transition: height, 0.5s linear;
+        -ms-transition: height, 0.5s linear;
+        -o-transition: height, 0.5s linear;
+        transition: height, 0.5s linear;
+    }    
+      .aboutPage.open {
+        visibility:visible;
+        height:900px;
+      -webkit-transition:height, 0.5s linear;
+      -moz-transition: height, 0.5s linear;
+      -ms-transition: height, 0.5s linear;
+      -o-transition: height, 0.5s linear;
+      transition: height, 0.5s linear;
+      }
 
   
 
