@@ -369,13 +369,14 @@ body {
         border: 10px solid rgb(68, 68, 68);
         padding: 15px;
         height:600px;
-        transition: opacity  5s;
         opacity: 1;
-      -webkit-transition: height, 0.5s linear;
-      -moz-transition: height, 0.5s linear;
-      -ms-transition: height, 0.5s linear;
-      -o-transition: height, 0.5s linear;
-      transition: height, 0.5s linear;
+        -webkit-transition: height, 0.5s linear;
+        -moz-transition: height, 0.5s linear;
+        -ms-transition: height, 0.5s linear;
+        -o-transition: height, 0.5s linear;
+        transition: height, 0.5s linear;
+        /* transition-property: opacity;
+        transition-delay: 1s; */
       }
 
   
@@ -426,3 +427,45 @@ body {
 
 
   /***********************login form animations*********************/
+
+
+
+  #resume{
+
+    border: 1px solid white; 
+    padding: 10px; 
+    background-color: white;
+
+  }
+
+  #gitlink{
+
+    border: 1px solid white; 
+    padding: 10px; 
+    background-color: white;
+
+  }
+
+  #linkedln{
+
+    border: 1px solid white; 
+    padding: 10px; 
+    background-color: white;
+  }
+
+  #resume:hover{
+    background-color: gray;
+    transition-duration: 500ms;
+  }
+
+  #gitlink:hover{
+    background-color: gray;
+    transition-duration: 500ms;
+
+  }
+
+  #linkedln:hover{
+    background-color: gray;
+    transition-duration: 500ms;
+
+  }

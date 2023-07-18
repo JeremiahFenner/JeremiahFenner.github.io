@@ -7,11 +7,13 @@
 
 
 html {
-    height: 100%;
+    height: auto;
   }
   
   body {
-    height: 100%;
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
     margin: 0;
     overflow: hidden;
     background: #333
@@ -217,16 +219,39 @@ html {
 /* ***********************flashcards********************* */
 
   #cardTable{
+    flex: 1;
     color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%; /*controls how far the term/def input boxes are from the inputed value table*/
+  }
+
+  table{
+    width: 50%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    overflow-y: scroll;
+  }
+
+  td{
+    border: 3px solid white;
+  }
+
+
+  th, td{
+    padding: 18px;
   }
 
   #terms{
+    flex: 1;
     position: absolute;
     bottom: 200px;
     left: 100px;
   }
 
   #definitions{
+    flex: 1;
     position: absolute;
     bottom: 200px;
     left: 700px;
@@ -285,9 +310,9 @@ html {
   }
 
   #editcard{
-    position: absolute;
-    margin: 1px;
-    padding: 5px;
+    position: relative;
+    margin: 3px;
+    padding: 3px;
     background: none;
     border: none;
     color: white;
@@ -302,9 +327,9 @@ html {
   }
 
   #removecard{
-    position: absolute;
-    margin: 1px;
-    padding: 5px;
+    position: relative;
+    margin: 3px;
+    padding: 3px;
     background: none;
     border: none;
     color: white;
