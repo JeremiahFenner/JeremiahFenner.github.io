@@ -29,7 +29,7 @@
 
     <!-- ***********************flashcards********************* -->
 
-    <div style="border: 1px solid white;">
+    <div id="topCards">
       <p id="front">
         <!-- term lives here   -->
       </p>
@@ -43,7 +43,7 @@
 
   <div id ="activeCardButtons">
     <button id="prev" onclick="prevCard()">&cularr;</button>
-    <button id="flip" type="button" value="Flip" onclick="flash()">Flip</button>
+    <button id="flip" type="button" value="Flip" onclick="flash()">Flip Card</button>
     <button id="next" onclick="nextCard()">&curarr;</button>
   </div>
 
@@ -70,7 +70,7 @@
       <input id="newTerm" type="text" placeholder="Term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
       <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13) cardAdd()">
       <br>
-      <input id="submit" type="button" onClick="cardAdd(); listCard();" value="&#10009" style="justify-content: center; align-self: center;">
+      <input id="submit" type="button" onClick="cardAdd(); listCard();" value="&#10009" >
       <br>
     </form>
     <br>

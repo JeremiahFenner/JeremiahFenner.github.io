@@ -358,6 +358,7 @@ body {
 
       .aboutPage {
         opacity: 0;
+        visibility: hidden;
         height:0px;
           -webkit-transition: height, 0.5s linear;
         -moz-transition: height, 0.5s linear;
@@ -369,6 +370,7 @@ body {
         border: 10px solid rgb(68, 68, 68);
         padding: 15px;
         height:600px;
+        visibility: visible;
         opacity: 1;
         -webkit-transition: height, 0.5s linear;
         -moz-transition: height, 0.5s linear;

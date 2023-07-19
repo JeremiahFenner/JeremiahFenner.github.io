@@ -124,9 +124,9 @@ var makeItRain = function() {
   
     function updatePlaceholder() {
       document.getElementById("newTerm").placeholder =
-        "...another term?";
+        "Term";
       document.getElementById("newDef").placeholder =
-        "...and another definition?";
+        "Definition";
     }
   
     formFront = document.getElementById("newTerm");

@@ -14,8 +14,10 @@ html {
     height: auto;
     min-height: 100vh;
     max-height: none;
+    width: 100vw;
     margin: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     background: #333
   }
 
@@ -218,6 +220,16 @@ html {
 
 /* ***********************flashcards********************* */
 
+  #topCards{
+    border: 2px solid rgb(131, 145, 160);
+    width: 50%;
+    margin: auto;
+  }
+
+  ::placeholder{
+    text-align: center;
+  }
+
   #cardTable{
     flex: 1;
     color: white;
@@ -235,12 +247,13 @@ html {
   }
 
   td{
-    border: 3px solid white;
+    border: 3px solid #333;
   }
 
 
   th, td{
     padding: 18px;
+    background-color: rgb(131, 145, 160);
   }
 
   #terms{
@@ -344,24 +357,25 @@ html {
   }
 
   #flip {
-    position:absolute;
-    width: 50px;
-    left:50%;
-    margin-left:-25px;
+    display: flex;
+    position:relative;
+    text-align: center;
+    justify-content: center;
+    width: 100px;
+    margin: auto;
   
   
   }
 
 
   #submit {
+    display: flex;
     position:relative;
-    width:180px;
-    margin-left:10px;
-    margin-top:10px;
-    margin-bottom:10px;
-    width: 25px;
+    text-align: center;
+    justify-content: center;
+    right: -3.5%;
+    width: 3%;
     height: 25px;
-    display:block;
   }
   #cardForm {
     position:absolute;
@@ -408,6 +422,7 @@ html {
   #formContainer{
     display:block;
     position:relative;
+    justify-content: center;
     margin-left:-90px;
     width:100%;
   }
