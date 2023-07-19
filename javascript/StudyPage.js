@@ -98,7 +98,7 @@ var makeItRain = function() {
     var cell4 = row.insertCell(3);
     cell1.innerHTML = myCards[cardIndex].term;
     cell2.innerHTML = myCards[cardIndex].definition;
-    cell3.innerHTML = '<input type="button" value="&#9851" id="editcard" onclick="deleteRow(this)"/>';
+    cell3.innerHTML = '<input type="button" value="&#9851" id="editcard" onclick="deleteRow(this.parentNode)"/>';
     cell4.innerHTML = '<input type="button" value="&#9998" id="removecard" onclick="editRow(this)"/>';
 
   }
