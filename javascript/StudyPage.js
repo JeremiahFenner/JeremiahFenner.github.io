@@ -40,6 +40,15 @@ var makeItRain = function() {
 
   //***********************flashcards*********************/
 
+//   var input = document.getElementById("submit");
+//   input.addEventListener("keypress", function(event){ 
+//     if(event.key === "Enter"){ 
+//       event.preventDefault();
+//       document.querySelector('form').submit();
+
+//   }
+// });
+
 
 
 
@@ -95,11 +104,11 @@ var makeItRain = function() {
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
+    // var cell4 = row.insertCell(3);
     cell1.innerHTML = myCards[cardIndex].term;
     cell2.innerHTML = myCards[cardIndex].definition;
     cell3.innerHTML = '<input type="button" value="&#9851" id="editcard" onclick="deleteRow(this.parentNode)"/>';
-    cell4.innerHTML = '<input type="button" value="&#9998" id="removecard" onclick="editRow(this)"/>';
+    // cell4.innerHTML = '<input type="button" value="&#9998" id="removecard" onclick="editRow(this)"/>';
 
   }
 

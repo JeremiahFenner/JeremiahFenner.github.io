@@ -25,6 +25,17 @@ html {
     color: white;
   }
 
+  #MemoryShark_white{
+    background-image: url("../images/MemoryShark_white.png");
+    position: absolute;
+    display: block;
+    background-size: 100%;
+    width: 110px;
+    height: 94px;
+    margin-right: 30%;
+    left: 85%;
+  }
+
 
 
 
@@ -224,6 +235,7 @@ html {
     border: 2px solid rgb(131, 145, 160);
     width: 50%;
     margin: auto;
+    background-color: rgb(131, 145, 160);
   }
 
   ::placeholder{

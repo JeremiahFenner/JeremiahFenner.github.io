@@ -26,6 +26,9 @@
 
     </form> -->
 
+    <div id="MemoryShark_white">
+    </div>
+
 
     <!-- ***********************flashcards********************* -->
 
@@ -68,9 +71,9 @@
   <div id="formContainer">
     <form id="cardForm">
       <input id="newTerm" type="text" placeholder="Term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
-      <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13) cardAdd()">
+      <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13){cardAdd(); listCard();}">
       <br>
-      <input id="submit" type="button" onClick="cardAdd(); listCard();" value="&#10009" >
+      <input id="submit" type="button" onClick="cardAdd(); listCard();" value="&#10009">
       <br>
     </form>
     <br>
