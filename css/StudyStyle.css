@@ -187,7 +187,7 @@ html {
     border: none;
     border-radius: 10px;
     box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
-    color: #222;
+    color: rgb(131, 145, 160);
     font-size: 24px;
 
     &::before,
@@ -231,11 +231,25 @@ html {
 
 /* ***********************flashcards********************* */
 
+  .rowNumbers{
+    counter-reset: step;
+    position: relative;
+  }
+
+  .rowNumbers td:first-child::before{
+    counter-increment: step;
+    content: counter(step, decimal);
+    color: rgb(131, 145, 160);
+    position:absolute;
+    left: -16px;
+  }
+
   #topCards{
     border: 2px solid rgb(131, 145, 160);
     width: 50%;
     margin: auto;
     background-color: rgb(131, 145, 160);
+    height: 70%;
   }
 
   ::placeholder{
@@ -284,11 +298,24 @@ html {
 
 
   #front, #back {
+    position: relative;
     min-width:100%;
     max-width:900px;
     text-align: center;
     color: white;
+    margin: auto;
+    padding: 15px;
+    font-size: 30px;
   }
+
+  #front{
+    left: 25%;
+  }
+
+  #back{
+    right: 25%;
+  }
+
   #activeCardButtons {
     min-width: 100%;
     max-width: 900px;
@@ -369,14 +396,45 @@ html {
   }
 
   #flip {
-    display: flex;
-    position:relative;
-    text-align: center;
+    position: relative;
+    font-family:  'Lora', serif;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background: #333;
+    margin: center;
     justify-content: center;
-    width: 100px;
-    margin: auto;
+    text-align: center;
+    left: 46%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    color: rgb(131, 145, 160);
+    font-size: 24px;
+
+    &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   
   
+  }
+
+  #flip:focus{
+    outline: none;
+  }
+
+  #flip:hover{
+    font-size: 24px;
+    transition: 500ms;
+    color: rgb(255, 255, 255);
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+    
+    
   }
 
 
