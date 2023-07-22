@@ -29,71 +29,82 @@
     <div id="MemoryShark_white">
     </div>
 
+    <div id="headerLine"></div>
+
 
     <!-- ***********************flashcards********************* -->
 
-    <div id="topCards">
-      <p id="front">
-        <!-- term lives here   -->
-      </p>
-      <div id="back">
-        <!-- definition lives here   -->
+  <div id="flashcards_body">
+    <div id="flashcards_active">
+
+      <div id="topCards">
+        <p id="front">
+          <!-- term lives here   -->
+        </p>
+        <p id="back">
+          <!-- definition lives here   -->
+        </p>
       </div>
-    </div>
-  
-  
-  <br>
-
-  <div id ="activeCardButtons">
-    <button id="prev" onclick="prevCard()">&cularr;</button>
-    <button id="flip" type="button" value="Flip" onclick="flash()">Flip Card</button>
-    <button id="next" onclick="nextCard()">&curarr;</button>
-  </div>
-
-
-
-  <br>
-  <br>
-  <br>
-
-
-
-  <table id="cardTable" class="rowNumbers">
-    <!-- <tr>
-      <td><form><input type="submit" value="&#9851"></form></td>
-    </tr> -->
     
-  </table>
-
-
-
-
-  <div id="formContainer">
-    <form id="cardForm">
-      <input id="newTerm" type="text" placeholder="Term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
-      <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13){cardAdd(); listCard();}">
-      <br>
-      <input id="submit" type="button" onClick="cardAdd(); listCard();" value="&#10009">
-      <br>
-    </form>
+    
     <br>
+
+    <div id ="activeCardButtons">
+      <button id="prev" onclick="prevCard()">&cularr;</button>
+      <button id="flip" type="button" value="Flip" onclick="flash()">Flip Card</button>
+      <button id="next" onclick="nextCard()">&curarr;</button>
+    </div>
+
   </div>
 
-  <p id="terms">
-    <!-- card list terms live here -->
-  </p>
-  <p id="definitions">
-    <!-- card list definitions lives here -->
-  </p>
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <table id="cardTable" class="rowNumbers">
+      <!-- <tr>
+        <td><form><input type="submit" value="&#9851"></form></td>
+      </tr> -->
+      
+    </table>
+
+
+
+
+    <div id="formContainer">
+      <form id="cardForm">
+        <input id="newTerm" type="text" placeholder="Term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
+        <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13){cardAdd(); listCard();}">
+        <br>
+        <input id="submit" type="button" onClick="cardAdd(); listCard();" value="&#10009">
+        <br>
+      </form>
+      <br>
+    </div>
+
+    <p id="terms">
+      <!-- card list terms live here -->
+    </p>
+    <p id="definitions">
+      <!-- card list definitions lives here -->
+    </p>
 
 
 
 
 
 
-      <script type="text/javascript">
+        <script type="text/javascript">
 
-    </script>
+      </script>
+
+
+
+</div>
 
 
 
