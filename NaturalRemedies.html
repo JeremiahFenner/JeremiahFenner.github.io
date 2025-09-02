@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HomePage</title>
+  <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+  <div class="stack1">
+    <div class="title">
+      <div class="N1">N</div>
+      <div class="A1">A</div>
+      <div class="T1">T</div>
+      <div class="U1">U</div>
+      <div class="R1">R</div>
+      <div class="A2">A</div>
+      <div class="L1">L</div>
+      <div class="space1">...</div>
+      <div class="R2">R</div>
+      <div class="E1">E</div>
+      <div class="M1">M</div>
+      <div class="E2">E</div>
+      <div class="D1">D</div>
+      <div class="I1">I</div>
+      <div class="E3">E</div>
+      <div class="S1">S</div>
+
+      <div class="description"></div>
+      <div class="halfcircle"></div>
+    </div>
+
+
+    <br>
+
+    <button class="store" onclick="document.location='./html/Store.html'">Store</button>
+
+    <input id="searchbar" onkeyup="execute_search()" type="text" name="search" placeholder="Search">
+        </div>
+    
+  <div class="stack2">
+    
+    <!---------------------------------------------------------------------------------------Essential Oils-------->
+    <button class="collapsible" onclick="execute_collapse(this)">Essential Oils</button>
+    <div class="content">
+        <button class="collapsible" onclick="execute_collapse(this)">Lavendar</button>
+            <div class="content">
+              Relaxation: Used in aromatherapy and baths.<br> 
+              Sleep: Used in aromatherapy and baths.<br>
+              Insect Repellant: Add to soap and water spray bottles to add a nice cleaning scent and keep away insects.<br>
+              Lavendar Plant: Will Also keep away most insecsts, plant inside or outside of house.
+            </div>
+        <button class="collapsible" onclick="execute_collapse(this)">cinnamon</button>
+            <div class="content">
+              Insect Repellant: Add to soap and water spray bottles to add a nice cleaning scent and keep away insects.<br>
+            </div>
+        <button class="collapsible" onclick="execute_collapse(this)">Avoid</button>
+            <div class="content">
+              Pesticides: Extreemly toxic use Lavendar instead for insect controll.
+              Direct Contact: Essential oils are very potent and unrepresent
+            </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------Foods------------>
+    <button class="collapsible" onclick="execute_collapse(this)">Foods</button>
+    <div class="content">
+        <button class="collapsible" onclick="execute_collapse(this)">Lemon</button>
+            <div class="content">Lemon is great</div>
+        <button class="collapsible" onclick="execute_collapse(this)">Honey</button>
+            <div class="content">Honey is great</div>
+        <button class="collapsible" onclick="execute_collapse(this)">Avoid</button>
+            <div class="content">Honey is great</div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------Kitchen------------>
+    <button class="collapsible" onclick="execute_collapse(this)">Kitchen</button>
+    <div class="content">
+        <button class="collapsible" onclick="execute_collapse(this)">Stainless Steel</button>
+            <div class="content">Lemon is great</div>
+        <button class="collapsible" onclick="execute_collapse(this)">Cast Iron</button>
+            <div class="content">Honey is great</div>
+        <button class="collapsible" onclick="execute_collapse(this)">Avoid</button>
+            <div class="content">Honey is great</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="./script.js"></script>
+</body>
+</html>

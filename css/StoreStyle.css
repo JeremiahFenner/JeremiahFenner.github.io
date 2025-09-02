@@ -1,0 +1,26 @@
+
+
+
+
+body {
+  background-color: rgb(201, 198, 194);
+  height: 100%;
+
+}
+
+
+
+
+
+.image1 {
+    width: 100%;
+    height: 100%;
+    border: none;
+
+    /* center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
