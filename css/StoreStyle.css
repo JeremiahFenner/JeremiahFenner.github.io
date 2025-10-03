@@ -99,18 +99,24 @@ body {
     align-items: center;
     margin: 10px;
 
+    box-shadow: 5px 5px grey;
+
 }
 
 .paypal {
   position: absolute;
 
-  top: 140px;
+  top: 180px;
   left: 1000px;
 
   width: 420px;
-  height: 1000px;
+  height: 970px;
   background-color: transparent;
   margin: 10px;
+
+  outline: 1px solid black;
+  box-shadow: 15px 15px grey;
+  outline-offset: 12px;
 }
 
 
