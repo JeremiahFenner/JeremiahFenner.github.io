@@ -9,6 +9,90 @@ body {
   height: 100%;
 
 }
+
+/********************** Header */
+
+
+
+
+
+.youtube {
+  background-color: transparent;
+  border: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 19px;
+  position: fixed;
+
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  
+
+
+  width: 100px;
+  height: 50px;
+  top: 10px;
+  left: 250px;
+  cursor: pointer;
+
+  display: flex;
+}
+
+
+
+.store {
+  background-color: transparent;
+  border: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 19px;
+  position: fixed;
+
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  
+
+
+  width: 100px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+
+  display: flex;
+}
+
+.light {
+  background-color: transparent;
+  border: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 19px;
+  position: fixed;
+
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  
+
+
+  width: 100px;
+  height: 50px;
+  top: 10px;
+  left: 130px;
+  cursor: pointer;
+
+  display: flex;
+}
+
+
+
+.opaque-button {
+  opacity: 0.3;
+}
+
+
+
+
+
+
 /********************** SECTION 1 */
 
 
@@ -33,69 +117,6 @@ body {
 
 }
 
-
-
-.buttoncontainer {
-  
-}
-
-
-.youtube {
-  background-color: transparent;
-  border: none;
-  font-family: 'Times New Roman', serif;
-  font-size: 19px;
-  position: fixed;
-  
-
-
-  width: 100px;
-  height: 50px;
-  top: 10px;
-  left: 250px;
-  cursor: pointer;
-
-  display: flex;
-}
-
-
-
-.store {
-  background-color: transparent;
-  border: none;
-  font-family: 'Times New Roman', serif;
-  font-size: 19px;
-  position: fixed;
-  
-
-
-  width: 100px;
-  height: 50px;
-  top: 10px;
-  left: 10px;
-  cursor: pointer;
-
-  display: flex;
-}
-
-.light {
-  background-color: transparent;
-  border: none;
-  font-family: 'Times New Roman', serif;
-  font-size: 19px;
-  position: fixed;
-
-  
-
-
-  width: 100px;
-  height: 50px;
-  top: 10px;
-  left: 130px;
-  cursor: pointer;
-
-  display: flex;
-}
 
 
 .title{
