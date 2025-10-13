@@ -1,0 +1,178 @@
+
+
+
+
+
+
+/********************** Header */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+}
+
+
+.instruction {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.homebutton {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 19px;
+    position: fixed;
+    
+
+
+    width: 100px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+
+    display: flex;
+}
+
+
+
+/********************** Lights */
+
+
+.oval {
+    width: 300px;
+    height: 200px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 20% 20%;
+    background: radial-gradient(ellipse at center, #2d5a2d, #1a3d1a, #0d2b0d);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.oval:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+}
+
+.oval.active {
+    background: radial-gradient(ellipse at center, #6ba84a, #4a8f4a, #357a35, #2d5a2d, #1a3d1a);
+    box-shadow: 0 8px 30px rgba(107, 168, 74, 0.5);
+}
+
+.oval::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+    background: radial-gradient(ellipse, rgba(255, 255, 200, 0.1), transparent);
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.oval.active::before {
+    opacity: 1;
+    background: radial-gradient(ellipse, rgba(255, 255, 180, 0.4), rgba(255, 255, 200, 0.2), transparent);
+}
+
+.oval::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 30px;
+    background: linear-gradient(45deg, #ffd700, #ffed4a, #ffd700);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.tall-rectangle {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    width: 45px;
+    height: 220px;
+    background: linear-gradient(135deg, #ffd700, #ffed4a, #ffc107, #ffd700);
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+
+
+
+
+/********************** Background */
+
+
+
+
+.background-rectangle {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 500px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: Arial;
+    text-shadow: 0 0 2px #000;
+    user-select: none;
+    cursor: default;
+    animation: snowflakes-fall 8s linear infinite, snowflakes-shake 3s ease-in-out infinite;
+}
+
+@keyframes snowflakes-fall {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+@keyframes snowflakes-shake {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(30px); }
+    100% { transform: translateX(0px); }
+}
+
+.snowflake:nth-of-type(1) { left: 5%; animation-delay: 0s, 0s; }
+.snowflake:nth-of-type(2) { left: 15%; animation-delay: 1s, 1s; }
+.snowflake:nth-of-type(3) { left: 25%; animation-delay: 6s, 0.5s; }
+.snowflake:nth-of-type(4) { left: 35%; animation-delay: 4s, 2s; }
+.snowflake:nth-of-type(5) { left: 45%; animation-delay: 2s, 2s; }
+.snowflake:nth-of-type(6) { left: 55%; animation-delay: 8s, 3s; }
+.snowflake:nth-of-type(7) { left: 65%; animation-delay: 6s, 2s; }
+.snowflake:nth-of-type(8) { left: 75%; animation-delay: 2.5s, 1s; }
+.snowflake:nth-of-type(9) { left: 85%; animation-delay: 1s, 0s; }
+.snowflake:nth-of-type(10) { left: 95%; animation-delay: 3s, 1.5s; }
+
+
