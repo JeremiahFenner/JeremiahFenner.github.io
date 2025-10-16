@@ -444,6 +444,22 @@ body {
 
 }
 
+.notification{
+  position: relative;
+  font-size: 20px;
+  color: black;
+  align-self: center;
+  top: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 5px;
+  margin: 5px;
+}
+
 
 
 
@@ -483,12 +499,14 @@ body {
 }
 
 
-
+#title{
+  font-size: 30px;
+}
 
 
 .collapsible {
   background-color: #dbc38a;
-  color: white;
+  color: rgb(109, 109, 109);
   cursor: pointer;
   padding: 18px;
   width: 95%;
@@ -496,11 +514,11 @@ body {
   text-align: left;
   outline: 1px solid black;
   font-size: 24px;
-  margin: 2px;
+  margin: 3px;
 }
 
 .active, .collapsible:hover {
-  background-color: #8b8b8b;
+  background-color: #cfcfcf;
 }
 
 .content {
@@ -518,6 +536,7 @@ body {
   color: black;
   font-size: 22px;
   text-align: left;
+  margin-left: 60px;
 }
 
 .collapsible.active + .content {
