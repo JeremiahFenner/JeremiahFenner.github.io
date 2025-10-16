@@ -5,7 +5,7 @@
 
 
 body {
-  background-color: rgb(201, 198, 194);
+  background-color: rgb(201, 211, 195);
   height: 100%;
 
 }
@@ -487,19 +487,20 @@ body {
 
 
 .collapsible {
-  background-color: #8ca87c;
+  background-color: #dbc38a;
   color: white;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 95%;
   border: none;
   text-align: left;
-  outline: none;
+  outline: 1px solid black;
   font-size: 24px;
+  margin: 2px;
 }
 
 .active, .collapsible:hover {
-  background-color: #7a7a7a;
+  background-color: #8b8b8b;
 }
 
 .content {
@@ -507,14 +508,14 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  background-color: #7a7a7a;
+  background-color:rgb(201, 211, 195);
   opacity: 0;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .content div {
   padding: 5px 2px;
-  color: white;
+  color: black;
   font-size: 22px;
   text-align: left;
 }
