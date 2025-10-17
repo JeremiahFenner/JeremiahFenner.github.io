@@ -25,6 +25,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
+  box-shadow: 2px 2px grey;
 
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
@@ -53,6 +54,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
+  box-shadow: 2px 2px grey;
 
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
@@ -79,6 +81,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
+  box-shadow: 2px 2px grey;
 
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
