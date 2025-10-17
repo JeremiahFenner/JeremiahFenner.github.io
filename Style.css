@@ -18,33 +18,13 @@ body {
 
 .youtube {
   background-color: transparent;
-  border: none;
+  border: 1px solid black;
   font-family: 'Times New Roman', serif;
   font-size: 19px;
   position: fixed;
-
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  
-
-
-  width: 100px;
-  height: 50px;
-  top: 10px;
-  left: 250px;
-  cursor: pointer;
-
-  display: flex;
-}
-
-
-
-.store {
-  background-color: transparent;
-  border: none;
-  font-family: 'Times New Roman', serif;
-  font-size: 19px;
-  position: fixed;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
@@ -58,14 +38,47 @@ body {
   cursor: pointer;
 
   display: flex;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+.store {
+  background-color: transparent;
+  border: 1px solid black;
+  font-family: 'Times New Roman', serif;
+  font-size: 19px;
+  position: fixed;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  
+
+
+  width: 100px;
+  height: 50px;
+  top: 75px;
+  left: 10px;
+  cursor: pointer;
+
+  display: flex;
+  margin: 10px;
+  padding: 10px;
 }
 
 .light {
   background-color: transparent;
-  border: none;
+  border: 1px solid black;
   font-family: 'Times New Roman', serif;
   font-size: 19px;
   position: fixed;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
@@ -75,11 +88,13 @@ body {
 
   width: 100px;
   height: 50px;
-  top: 10px;
-  left: 130px;
+  top: 140px;
+  left: 10px;
   cursor: pointer;
 
   display: flex;
+  margin: 10px;
+  padding: 10px;
 }
 
 
