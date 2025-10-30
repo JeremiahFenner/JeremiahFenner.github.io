@@ -196,50 +196,77 @@ function execute_search() {
 
 
 function execute_collapse(button) {
-    // Get the next sibling element (the content div)
     var content = button.nextElementSibling;
     
-    // Check if content is currently expanded
-    // We'll check both the maxHeight value and the active class for reliability
     var isCurrentlyExpanded = button.classList.contains("active") && 
                               content.style.maxHeight && 
                               content.style.maxHeight !== "0px";
     
     if (isCurrentlyExpanded) {
-        // Currently expanded, so collapse it
         button.classList.remove("active");
         content.style.maxHeight = "0px";
-    } else {
-        // Currently collapsed, so expand it
-        button.classList.add("active");
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
-    
-    // Update parent container heights after expansion/collapse completes
-    setTimeout(() => {
-        let currentElement = button;
         
-        // Walk up the hierarchy and update all parent content containers
-        while (currentElement) {
-            let parent = currentElement.parentElement;
-            
-            // Check if this parent is a content div
-            if (parent && parent.classList && parent.classList.contains('content')) {
-                // Force recalculation by temporarily removing maxHeight
-                let oldMaxHeight = parent.style.maxHeight;
+        // For collapsing, update parents immediately and after transition
+        setTimeout(() => {
+            updateParentHeights(button);
+        }, 50);
+        
+        setTimeout(() => {
+            updateParentHeights(button);
+        }, 450); // After the 0.4s transition completes
+        
+    } else {
+        button.classList.add("active");
+        
+        // Calculate and set the height smoothly
+        const fullHeight = content.scrollHeight;
+        content.style.maxHeight = fullHeight + "px";
+        
+        // Update parent heights progressively during expansion
+        setTimeout(() => {
+            updateParentHeights(button);
+        }, 50);
+        
+        setTimeout(() => {
+            updateParentHeights(button);
+        }, 200);
+        
+        setTimeout(() => {
+            updateParentHeights(button);
+        }, 450); // Final update after transition completes
+    }
+}
+
+// Helper function to update all parent container heights
+function updateParentHeights(element) {
+    let currentElement = element;
+    
+    while (currentElement) {
+        let parent = currentElement.parentElement;
+        
+        if (parent && parent.classList && parent.classList.contains('content')) {
+            // Check if parent button is active (expanded)
+            let parentButton = parent.previousElementSibling;
+            if (parentButton && parentButton.classList.contains('active')) {
+                // Temporarily set to auto to get true height
+                const currentMaxHeight = parent.style.maxHeight;
                 parent.style.maxHeight = 'none';
+                const newHeight = parent.scrollHeight;
                 
-                // Get the full scroll height and set it
-                let newHeight = parent.scrollHeight;
-                parent.style.maxHeight = newHeight + "px";
-                
-                // Move to the parent button of this content div
-                currentElement = parent.previousElementSibling;
-            } else {
-                break;
+                // Only update if height changed significantly (avoid micro-adjustments)
+                if (Math.abs(parseInt(currentMaxHeight) - newHeight) > 5) {
+                    parent.style.maxHeight = newHeight + "px";
+                } else {
+                    parent.style.maxHeight = currentMaxHeight;
+                }
             }
+            
+            // Move to the parent button
+            currentElement = parentButton;
+        } else {
+            break;
         }
-    }, 100); // Increased timeout to ensure content expansion completes
+    }
 }
 
 
