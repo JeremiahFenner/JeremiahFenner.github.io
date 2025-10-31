@@ -539,17 +539,66 @@ body {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  background-color:rgb(201, 211, 195);
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  background-color: rgb(201, 211, 195);
   opacity: 0;
 }
 
-.content div {
-  padding: 5px 2px;
+/* Normal content styling */
+.content {
   color: black;
   font-size: 22px;
   text-align: left;
-  margin-left: 60px;
+  padding-left: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Content with image - use grid layout */
+.content-has-image {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 20px;
+  align-items: start;
+  padding-right: 60px !important;
+}
+
+/* Image positioned in grid column 2 (right side) */
+.content-has-image .content-image {
+  grid-column: 2;
+  grid-row: 1;
+  width: 180px;
+  height: 320px;
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out 0.2s;
+  margin: 0;
+  position: sticky;
+  top: 10px;
+}
+
+.content-has-image .content-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Show image when parent is active */
+.collapsible.active + .content-has-image .content-image {
+  opacity: 1;
+}
+
+/* Regular nested content divs */
+.content .collapsible {
+  margin-left: 0;
+  width: 95%;
+}
+
+.content > .content {
+  padding-left: 40px;
 }
 
 .collapsible.active + .content {
