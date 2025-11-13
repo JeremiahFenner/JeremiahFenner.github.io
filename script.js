@@ -275,7 +275,7 @@ function updateParentHeights(element) {
 
 //////////////////////// Fade header elements when scrolling down
 
-const myButtons = document.querySelectorAll('#socialBtn');
+const myButtons = document.querySelectorAll('#socialBtn, #storeBtn');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
