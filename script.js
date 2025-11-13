@@ -275,7 +275,7 @@ function updateParentHeights(element) {
 
 //////////////////////// Fade header elements when scrolling down
 
-const myButtons = document.querySelectorAll('#headelement');
+const myButtons = document.querySelectorAll('#socialBtn');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
@@ -294,4 +294,21 @@ window.addEventListener('scroll', () => {
   }
 
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+});
+
+
+
+
+
+
+
+
+
+
+//////////////////////// Expand social media buttons
+const socialBtn = document.getElementById('socialBtn');
+const socialButtons = document.getElementById('socialButtons');
+
+socialBtn.addEventListener('click', () => {
+    socialButtons.classList.toggle('show');
 });

@@ -16,91 +16,92 @@ body {
 
 
 
-.youtube {
-  background-color: transparent;
-  border: 1px solid black;
-  font-family: 'Times New Roman', serif;
-  font-size: 19px;
-  position: fixed;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  box-shadow: 2px 2px grey;
-
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  
 
 
-  width: 100px;
-  height: 50px;
-  top: 10px;
-  left: 10px;
-  cursor: pointer;
 
-  display: flex;
-  margin: 10px;
-  padding: 10px;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-.store {
-  background-color: transparent;
-  border: 1px solid black;
-  font-family: 'Times New Roman', serif;
-  font-size: 19px;
-  position: fixed;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  box-shadow: 2px 2px grey;
-
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  
-
-
-  width: 100px;
-  height: 50px;
-  top: 75px;
-  left: 10px;
-  cursor: pointer;
-
-  display: flex;
-  margin: 10px;
-  padding: 10px;
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
 }
 
-.light {
-  background-color: transparent;
-  border: 1px solid black;
-  font-family: 'Times New Roman', serif;
-  font-size: 19px;
+.button-container {
   position: fixed;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  box-shadow: 2px 2px grey;
-
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-
-  
-
-
-  width: 100px;
-  height: 50px;
-  top: 140px;
-  left: 10px;
-  cursor: pointer;
-
+  top: 20px;
+  left: 20px;
   display: flex;
-  margin: 10px;
-  padding: 10px;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
 }
 
+.social-wrapper {
+  display: flex;
+  gap: 10px;
+}
 
+.main-btn {
+  background: #8B9D83;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.main-btn:hover {
+  background: #7a8a73;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.social-buttons.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.social-btn {
+  width: 50px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  width: 24px;
+  height: 24px;
+}
 
 .opaque-button {
   opacity: 0.3;
