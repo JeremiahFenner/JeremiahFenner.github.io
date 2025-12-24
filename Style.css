@@ -43,6 +43,18 @@ body {
   gap: 10px;
 }
 
+
+.info-btn {
+  background: transparent;
+  color: blue;
+  border: none;
+  text-decoration: none;
+}
+
+.info-btn:hover {
+  opacity: 0.5;
+}
+
 .main-btn {
   background: #8B9D83;
   color: black;
