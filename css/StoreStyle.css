@@ -5,7 +5,13 @@
 body {
   background-color: rgb(201, 211, 195);
   height: 100%;
+  animation: fadeIn 0.4s ease-in;
 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 
