@@ -479,10 +479,10 @@ body {
 
 .notification{
   position: relative;
-  font-size: 22px;
+  font-size: 20px;
   color: black;
   align-self: center;
-  top: 10%;
+  top: 20%;
 
   display: flex;
   justify-content: center;
