@@ -15,3 +15,16 @@ body{
 .main-content{
     font-size: 18px;
 }
+
+h1{
+  text-align: center;
+
+}
+
+.info-btn{
+  text-decoration: none;
+}
+
+.info-btn:hover{
+  opacity: 0.7;
+}
