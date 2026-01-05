@@ -5,7 +5,7 @@
 
 
 body {
-  background-color: rgb(201, 211, 195);
+  background-color: #eef1eb;
   height: 100%;
   animation: fadeIn 0.4s ease-in;
 
@@ -64,7 +64,7 @@ body {
 }
 
 .main-btn {
-  background: #8B9D83;
+  background: #e2e2e2;
   color: black;
   border: none;
   padding: 12px 28px;
@@ -481,7 +481,8 @@ body {
 
 .notification{
   position: relative;
-  font-size: 20px;
+  font-family: Terminal, 'Courier New', monospace;
+  font-size: 16px;
   color: black;
   align-self: center;
   top: 20%;
@@ -492,7 +493,8 @@ body {
   text-align: center;
 
   padding: 5px;
-  margin: 5px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 
@@ -539,16 +541,21 @@ body {
 
 
 .collapsible {
-  background-color: #dbc38a;
+  background-color: #ece8e8;
   color: rgb(109, 109, 109);
   cursor: pointer;
   padding: 18px;
-  width: 95%;
+  width: calc(95% - 150px);
   border: none;
   text-align: left;
   outline: 1px solid black;
   font-size: 24px;
-  margin: 3px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.collapsible div {
+  margin-left: 60px;
 }
 
 .active, .collapsible:hover {
@@ -556,20 +563,25 @@ body {
 }
 
 .content {
-  padding: 0 18px;
+  padding: 3px 3px 0 3px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  background-color:rgb(201, 211, 195);
+  background-color:#eef1eb;
   opacity: 0;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 4px;
+  width: calc(95% - 150px);
 }
 
 .content div {
   padding: 5px 2px;
+  padding-top: 10px;
   color: black;
   font-size: 22px;
   text-align: left;
-  margin-left: 60px;
+  margin-left: 100px;
 }
 
 .collapsible.active + .content {
