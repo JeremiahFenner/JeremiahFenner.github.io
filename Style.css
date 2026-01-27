@@ -1,14 +1,17 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
 
-
-
-
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: #eef1eb;
   height: 100%;
   animation: fadeIn 0.4s ease-in;
-
 }
 
 @keyframes fadeIn {
@@ -16,23 +19,10 @@ body {
   to { opacity: 1; }
 }
 
-/********************** Header */
 
-
-
-
-
-
-
-
-
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ============================================
+   HEADER / NAVIGATION BUTTONS
+   ============================================ */
 
 .button-container {
   position: fixed;
@@ -51,17 +41,112 @@ body {
   gap: 10px;
 }
 
+.opaque-button {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
 
-.info-btn {
+
+/* ============================================
+   SOCIAL BUTTON (3D STYLE)
+   ============================================ */
+
+.main-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  border-width: 0;
+  padding: 0 8px 12px;
+  width: 110px;
+  box-sizing: border-box;
   background: transparent;
-  color: blue;
-  border: none;
-  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
 }
 
-.info-btn:hover {
-  opacity: 0.5;
+.main-btn-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  padding: 8px 16px;
+  transform: translateY(0);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0, 0, 0, .25);
+  transition-property: transform;
+  transition-duration: .2s;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 600;
+  font-family:'Courier New', Courier, monospace;
 }
+
+.main-btn:active .main-btn-top {
+  transform: translateY(6px);
+}
+
+.main-btn-top::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  background-image: radial-gradient(#5a9bd4, #3d7fb5);
+  text-align: center;
+  color: #fff;
+  box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, .2), 0 1px 2px 1px rgba(255, 255, 255, .2);
+  transition-property: border-radius, padding, width, transform;
+  transition-duration: .2s;
+}
+
+.main-btn:active .main-btn-top::after {
+  border-radius: 6px;
+  padding: 0 2px;
+}
+
+.main-btn-bottom {
+  position: absolute;
+  z-index: -1;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 8px / 16px 16px 8px 8px;
+  padding-top: 6px;
+  width: calc(100% - 8px);
+  height: calc(100% - 10px);
+  box-sizing: content-box;
+  background-color: #2a5a7f;
+  background-image: radial-gradient(4px 8px at 4px calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(4px 8px at calc(100% - 4px) calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(16px at -4px 0, white, transparent), radial-gradient(16px at calc(100% + 4px) 0, white, transparent);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5), inset 0 -1px 3px 3px rgba(0, 0, 0, .4);
+  transition-property: border-radius, padding-top;
+  transition-duration: .2s;
+}
+
+.main-btn:active .main-btn-bottom {
+  border-radius: 10px 10px 8px 8px / 8px;
+  padding-top: 0;
+}
+
+.main-btn-base {
+  position: absolute;
+  z-index: -2;
+  top: 4px;
+  left: 0;
+  border-radius: 12px;
+  width: 100%;
+  height: calc(100% - 4px);
+  background-color: rgba(0, 0, 0, .15);
+  box-shadow: 0 1px 1px 0 rgba(255, 255, 255, .75), inset 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+
+/* ============================================
+   STORE BUTTON (3D STYLE)
+   ============================================ */
 
 .store-btn {
   -webkit-appearance: none;
@@ -69,14 +154,15 @@ body {
   position: relative;
   border-width: 0;
   padding: 0 8px 12px;
-  min-width: 10em;
+  width: 110px;
   box-sizing: border-box;
   background: transparent;
   font: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.store-btn-top{
+.store-btn-top {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,7 +204,7 @@ body {
   padding: 0 2px;
 }
 
-.store-btn-bottom{
+.store-btn-bottom {
   position: absolute;
   z-index: -1;
   bottom: 4px;
@@ -152,30 +238,10 @@ body {
   box-shadow: 0 1px 1px 0 rgba(255, 255, 255, .75), inset 0 2px 2px rgba(0, 0, 0, .25);
 }
 
-.main-btn {
-  background: #e2e2e2;
-  color: black;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 20px;
-  font-weight: 600;
-  font-family:'Courier New', Courier, monospace;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  letter-spacing: 0px;
-  text-decoration: none;
-  text-align: left;
-  display: inline-block;
-  width: 110px;
-}
 
-.main-btn:hover {
-  background: #cfcfcf;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+/* ============================================
+   SOCIAL MEDIA ICON BUTTONS
+   ============================================ */
 
 .social-buttons {
   display: flex;
@@ -210,45 +276,47 @@ body {
   height: 24px;
 }
 
-.opaque-button {
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
+
+/* ============================================
+   INFO BUTTON
+   ============================================ */
+
+.info-btn {
+  background: transparent;
+  color: blue;
+  border: none;
+  text-decoration: none;
+}
+
+.info-btn:hover {
+  opacity: 0.5;
 }
 
 
+/* ============================================
+   STACK 1 - HERO SECTION
+   ============================================ */
 
-
-
-
-/********************** SECTION 1 */
-
-
-
-
-
-.stack1{
+.stack1 {
   width: 100%;
   height: 850px;
-  /* outline: 2px solid white; */
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-
   align-items: center;
   justify-content: center;
   display: flex;
   text-align: center;
-
   flex-direction: column;
-  
-
 }
 
 
+/* ============================================
+   TITLE - "NATURAL REMEDIES" ARC TEXT
+   ============================================ */
 
-.title{
-
+.title {
   position: absolute;
   top: 6%;
   align-items: center;
@@ -256,7 +324,7 @@ body {
   text-overflow: ellipsis;
 }
 
-.halfcircle{
+.halfcircle {
   top: 13%;
   position: absolute;
   width: 750px;
@@ -266,274 +334,190 @@ body {
   border-top-right-radius: 350px;
 }
 
-
-
-
-
-
-.N1{ 
+/* Individual letter positioning for arc effect */
+.N1 { 
   transform: translate(163px, 190px) rotate(-67deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 31%;
-  right: 83%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block;
 }
 
-.A1{ 
+.A1 { 
   transform: translate(117px, 134px) rotate(-55deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 27%;
-  right: 79%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block;
 }
 
-.T1{ 
+.T1 { 
   transform: translate(78px, 94px) rotate(-47deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 24%;
-  right: 74%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block;
 }
 
-.U1{
+.U1 {
   transform: translate(48px, 59px) rotate(-37deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 24%;
-  right: 74%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block;
-
 }
 
-.R1{ 
+.R1 { 
   transform: translate(21px, 24px) rotate(-31deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 20%;
-  right: 67%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block;
 }
 
-.A2{ 
+.A2 { 
   transform: translate(6px, -4px) rotate(-19deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 17%;
-  right: 64%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block;
 }
 
-.L1{ 
+.L1 { 
   transform: translate(-2px, -20px) rotate(-7deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 16%;
-  right: 59%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block;
 }
 
-.space1{ 
+.space1 { 
   transform: translate(0px, -30px) rotate(0deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
   color: transparent;
-
   text-align: left;
   display: inline-block; 
 }
 
-.R2{
+.R2 {
   transform: translate(-2px, -20px) rotate(5deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
-.E1{ 
+.E1 { 
   transform: translate(-8px, -8px) rotate(15deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
-.M1{ 
+.M1 { 
   transform: translate(-19px, 15px) rotate(22deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
-.E2{ 
+.E2 { 
   transform: translate(-34px, 48px) rotate(33deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
-.D1{ 
+.D1 { 
   transform: translate(-58px, 87px) rotate(42deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
-.I1{ 
+.I1 { 
   transform: translate(-87px, 122px) rotate(53deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
-.E3{ 
+.E3 { 
   transform: translate(-119px, 160px) rotate(60deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
-.S1{ 
+.S1 { 
   transform: translate(-162px, 207px) rotate(69deg);
   font-size: 4.5rem;
   font-family: 'Lora', serif;
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
-  /*top: 8%;
-  right: 90%;
-  position: absolute;*/
-
   text-align: left;
   display: inline-block; 
 }
 
 
+/* ============================================
+   DESCRIPTION & NOTIFICATION
+   ============================================ */
 
-
-.description{
-
+.description {
   font-size: 2.3rem;
   font-family: 'Lora', serif;
   position: absolute;
@@ -541,18 +525,32 @@ body {
   padding: 5px;
   margin: 5px;
   z-index: 100;
-
   white-space: nowrap;
   text-overflow: ellipsis;
-  
-
   display: inline-block;
   text-align: left;
+}
 
-
+.notification {
+  position: relative;
+  font-family: Terminal, 'Courier New', monospace;
+  font-size: 16px;
+  color: black;
+  align-self: center;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 
+/* ============================================
+   SEARCH BAR
+   ============================================ */
 
 #searchbar {
   position: relative;
@@ -563,71 +561,42 @@ body {
   outline: none;
   background-color: transparent;
   width: 500px;
-
   text-align: center;
-
-}
-
-.notification{
-  position: relative;
-  font-family: Terminal, 'Courier New', monospace;
-  font-size: 16px;
-  color: black;
-  align-self: center;
-  top: 20%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  padding: 5px;
-  margin-left: 250px;
-  margin-right: 250px;
 }
 
 
+/* ============================================
+   STACK 2 - MAIN CONTENT AREA
+   ============================================ */
 
-
-
-
-
-
-
-
-/********************** SECTION 2 */
-
-
-.stack2{
+.stack2 {
   width: 100%;
   height: 2500px;
-  /* outline: 2px solid rgb(255, 255, 255); */
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-
   text-align: center;
-
   align-items: flex-start;
   align-content: flex-start;
   justify-content: center;
-
   overflow: scroll;
-  /* remove scroll bar internet exp 10+ & firefox */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
-.stack2::-webkit-scrollbar { /*remove scroll wheel chrome & safari */
-  display: none;
+.stack2::-webkit-scrollbar {
+  display: none; /* Chrome & Safari */
 }
 
 
-#title{
+/* ============================================
+   COLLAPSIBLE SECTIONS
+   ============================================ */
+
+#title {
   font-size: 30px;
 }
-
 
 .collapsible {
   background-color: #ece8e8;
@@ -656,7 +625,7 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  background-color:#eef1eb;
+  background-color: #eef1eb;
   opacity: 0;
   margin-left: 150px;
   margin-right: 150px;
