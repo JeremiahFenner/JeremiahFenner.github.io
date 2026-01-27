@@ -79,9 +79,9 @@ body {
   transition-duration: .2s;
   -webkit-user-select: none;
   user-select: none;
-  font-size: 20px;
-  font-weight: 600;
-  font-family:'Courier New', Courier, monospace;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: 'Lora', serif;
 }
 
 .main-btn:active .main-btn-top {
@@ -177,6 +177,9 @@ body {
   transition-duration: .2s;
   -webkit-user-select: none;
   user-select: none;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: 'Lora', serif;
 }
 
 .store-btn:active .store-btn-top {
